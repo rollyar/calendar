@@ -1,0 +1,131 @@
+es:
+  hello: "Hola mundo"
+  save: "Guardar"
+  select_all: "Seleccionar todos"
+  logout: 'Salir'
+  sign_up: 'Crear una cuenta'
+  login: 'Logar'
+  edit_profile: 'Editar  cuenta'
+  edit: 'Editar'
+  show: 'Visualizar'
+  destroy: 'Excluir'
+  schedule: 'Agendar'
+  remove: 'Quitar'
+  back: 'Atras'
+  business: 'Empresa'
+  resume: 'Resumen'
+  contact: 'Contacto'
+  address: 'Dirección'
+  phone: 'Teléfono'
+  promote: 'Promover'
+  services: {
+    zero: 'Aún no hay servicios registrados', # optional
+    one: 'Elige el servicio y agenda tu cita',
+    other: 'Elige el servicio y agenda tu cita'
+  }
+  step1: 'Paso 1/2: seleccione una fecha y hora'
+  step2: 'Paso 2/2:'
+  select: 'Seleccione'
+  select_date_hour: 'Por favor, seleccione una fecha y hora.'
+  select_resource: 'Por favor, seleccione un empleado.'
+  helpers:
+      submit:
+        create: "Registrar %{model}"
+        submit: "Guardar %{model}"
+        update: "Atualizar %{model}"
+  activerecord:
+    models:
+      appointment: "Planificación"
+      client: "Cliente"
+      resource: "Empleado"
+      companies_service: "Servicio"
+      company: "Detalles de la compañía"
+      opening_hour: "Horario de atención"
+      user: 'Usuario'
+      repeat: 'Repetición'
+    attributes:
+      appointment:
+        resource_id: 'Empleado'
+        client: "Cliente"
+        companies_service_id: 'Servicio'
+        start: 'Inicio'
+        duration: 'Duración'
+        remindertime: 'Enviar recordatorio antes de '
+      company:
+        name: 'Nombre de la empresa'
+        phone: 'Teléfono'
+        street: 'Rua'
+        city: 'Cidade'
+        schedule_interval: 'Los clientes pueden reservar en línea cada'
+        min_antecedence: 'Los clientes pueden reservar en línea al menos'
+        max_antecedence: 'Los clientes pueden reservar en línea a más tardar'
+        minipage_url: "Minipágina"
+        logo: 'Logomarca'
+      client:
+        name: 'Nombre'
+        phone: 'Teléfono'
+        email: 'Email'
+      resource:
+        name: 'Nombre'
+        phone: 'Teléfono'
+      opening_hour:
+        weekdays: 'Dias de la semana'
+        from: 'Desde'
+        to: 'Hasta'
+      companies_service:
+        name: 'Nombre del servicio'
+        duration: 'Duración'
+        description: 'Descripción'
+        price: 'Precio'
+        resource_ids: 'Empleados'
+      user:
+        password: 'Contraseña'
+        password_confirmation: 'Confirmación de Contraseña'
+        remember_me: 'Recordar Contraseña'
+      repeat:
+        typerepeat: 'Repetir'
+        interval: 'Repetir una vez cada'
+        weekdays: 'Días de la semana'
+        end: 'Termina en'
+    errors:
+      models:
+        appointment:
+          attributes:
+            start:
+              taken: 'repetido para este proveedor al mismo tiempo'
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: 'no coincide con la contraseña'
+        client:
+          attributes:
+            email:
+              taken: 'ya en uso por otro cliente'
+        company:
+          attributes:
+            minipage_url:
+              taken: 'Esta en uso. Se debe ingresar otro valor.'
+      messages:
+        blank: 'debe ser llenado.'
+      template:
+        header:
+          one:   "1 error impidió que se guardara este %{model}"
+          other: "%{count} errores impidieron que se guardara este %{model}"
+        body:    "Hay problemas con los siguientes campos:"
+  
+  date:
+    formats:
+      default: "%d-%m-%Y"
+      short: "%d %b"
+      long: "%d %B %Y"
+    order:
+      - :day
+      - :month
+      - :year
+    day_names: [Domingo, Lues, Martes, Miércoles, Jueves, Viernes, Sábado]
+    month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+  time:
+    formats:
+      short: "%d/%m/%y"
+      day_month_weekday: '%d de %B - %A'
+      long: '%d de %B de %Y - %H:%Mh'

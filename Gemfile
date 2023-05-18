@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.1.1'
+gem 'rails', '~> 5.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -54,7 +53,7 @@ gem 'aws-sdk', '~> 3'
 
 gem 'dynamic_sitemaps'
 
-gem 'mini_racer', '~> 0.3.1'
+#gem 'mini_racer', '~> 0.3.1'
 
 # for railties app_generator_test
 gem 'bootsnap', '>= 1.1.0', require: false

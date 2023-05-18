@@ -22,7 +22,7 @@ module Calendar
     config.i18n.default_locale = :en
 
     # Whitelist locales available for the application
-    I18n.available_locales = [:en, :pt]
+    I18n.available_locales = [:en, :pt, :es]
 
     config.active_job.queue_adapter = :sidekiq
 
